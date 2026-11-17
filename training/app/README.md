@@ -20,9 +20,22 @@ curl -X POST --data-binary @../spec/samples/kt-200.xml http://localhost:8000/con
 
 ## テスト
 
+テストには PHPUnit 10.5 を使います。PHP 8.1 以上が必要です。
+
 ```
-composer test
+cd training/app
+composer install      # 初回のみ（PHPUnit を含む開発用依存も入ります）
+composer test         # 全テストを実行
 ```
+
+特定のテストだけ実行する場合:
+
+```
+vendor/bin/phpunit tests/ManualParserTest.php
+vendor/bin/phpunit --filter <テストメソッド名>
+```
+
+テストは `tests/` 配下にあります（設定は `phpunit.xml`）。
 
 ## 未対応
 
