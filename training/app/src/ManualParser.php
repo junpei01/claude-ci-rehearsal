@@ -21,7 +21,7 @@ class ManualParser
         $dom = new DOMDocument();
 
         libxml_use_internal_errors(true);
-        $loaded = $dom->loadXML($xml, LIBXML_NONET|LIBXML_NOENT);
+        $loaded = $dom->loadXML($xml, LIBXML_NONET);
         libxml_clear_errors();
 
         if ($loaded === false || $dom->documentElement === null) {
