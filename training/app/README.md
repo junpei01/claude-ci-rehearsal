@@ -20,9 +20,21 @@ curl -X POST --data-binary @../spec/samples/kt-200.xml http://localhost:8000/con
 
 ## テスト
 
+事前に `composer install` で依存（PHPUnit）を入れてください。PHP 8.1 以上が必要です。
+
+全テストを実行:
+
 ```
 composer test
 ```
+
+特定のテストファイルだけ実行:
+
+```
+vendor/bin/phpunit tests/ManualParserTest.php
+```
+
+テストは `tests/` 配下にあります（設定は `phpunit.xml`）。
 
 ## 未対応
 
