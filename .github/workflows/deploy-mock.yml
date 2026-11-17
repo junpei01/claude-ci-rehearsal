@@ -1,0 +1,28 @@
+name: 展開（模擬）
+# 人が Run workflow を押したときだけ動く
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # 展開できるブランチは、環境 mock-production の設定で main だけにする
+    environment: mock-production
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          extensions: dom, libxml
+          tools: composer
+      - name: マニュアルを HTML にする（模擬の展開物）
+        working-directory: training/app
+        run: |
+          composer install --no-dev --no-interaction --no-progress
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          php bin/convert ../spec/samples/kt-200.xml > "$GITHUB_WORKSPACE/dist/kt-200.html"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manual-html
+          path: dist/

@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use ManualConverter\Converter;
+use ManualConverter\InputException;
+
+if ($argc < 2) {
+    fwrite(STDERR, "使い方: php bin/convert <入力ファイル>\n");
+    exit(1);
+}
+
+$file = $argv[1];
+if (!is_file($file)) {
+    fwrite(STDERR, "ファイルがありません: {$file}\n");
+    exit(1);
+}
+
+$converter = new Converter();
+try {
+    $html = $converter->toHtml((string) file_get_contents($file));
+} catch (InputException $e) {
+    fwrite(STDERR, $e->getMessage() . "\n");
+    exit(1);
+}
+
+if ($html === null) {
+    foreach ($converter->errors as $error) {
+        fwrite(STDERR, $error . "\n");
+    }
+    exit(1);
+}
+
+echo $html;
+exit(0);

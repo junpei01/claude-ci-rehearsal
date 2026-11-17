@@ -1,0 +1,25 @@
+name: テスト
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: training/app
+    steps:
+      # テストは training/spec/samples も読むので、リポジトリ全体を取り出す
+      - uses: actions/checkout@v6
+      - uses: shivammathur/setup-php@v2
+        with:
+          # composer.json の config.platform.php に合わせる
+          php-version: "8.1"
+          extensions: dom, libxml
+          tools: composer
+      # composer.lock のとおりに入れる。update はしない
+      - run: composer install --no-interaction --no-progress
+      - run: vendor/bin/phpunit

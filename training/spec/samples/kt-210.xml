@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <meta>
+    <productName>業務用電気ケトル KT-210</productName>
+    <modelNumber>KT-210</modelNumber>
+    <revisionDate>2025/04/01</revisionDate>
+  </meta>
+  <body>
+    <section>
+      <title>安全上のご注意</title>
+      <caution>本体を水につけたり、水をかけたりしないでください。</caution>
+    </section>
+    <section>
+      <title>使いかた</title>
+      <para>KT-200 と同じです。保温ボタンが追加されています。</para>
+      <section>
+        <title>保温ボタン</title>
+        <para>沸騰後に押すと、約 90℃ で 1 時間保温します。</para>
+      </section>
+    </section>
+  </body>
+</manual>

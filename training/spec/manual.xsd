@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 製品マニュアル XML のスキーマ（株式会社ヤマナミ工機・架空） -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="manual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="meta" type="metaType"/>
+        <xs:element name="body" type="bodyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="metaType">
+    <xs:sequence>
+      <xs:element name="productName" type="xs:string"/>
+      <xs:element name="modelNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="revisionDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bodyType">
+    <xs:sequence>
+      <xs:element name="section" type="sectionType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sectionType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="para" type="xs:string"/>
+        <xs:element name="caution" type="xs:string"/>
+        <xs:element name="list" type="listType"/>
+      </xs:choice>
+      <xs:element name="section" type="sectionType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listType">
+    <xs:sequence>
+      <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

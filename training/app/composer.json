@@ -1,0 +1,33 @@
+{
+    "name": "yamanami/manual-converter",
+    "description": "製品マニュアル XML を HTML に変換する（有限会社サンプルソフト・架空）",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "ext-dom": "*",
+        "ext-libxml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ManualConverter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ManualConverter\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1.0"
+        },
+        "sort-packages": true
+    }
+}

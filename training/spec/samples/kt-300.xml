@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <meta>
+    <productName>業務用電気ケトル KT-300（試作）</productName>
+    <revisionDate>2026-09-15</revisionDate>
+  </meta>
+  <body>
+    <section>
+      <title>使いかた</title>
+      <section>
+        <title>温度の設定</title>
+        <section>
+          <title>設定できる温度</title>
+          <para>60℃・70℃・80℃・90℃・100℃ の5段階です。</para>
+          <section>
+            <title>100℃ を選んだとき</title>
+            <para>沸騰したあと、自動で電源が切れます。</para>
+          </section>
+        </section>
+      </section>
+    </section>
+  </body>
+</manual>

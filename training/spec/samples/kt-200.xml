@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <meta>
+    <productName>業務用電気ケトル KT-200</productName>
+    <modelNumber>KT-200</modelNumber>
+    <revisionDate>2026-10-01</revisionDate>
+  </meta>
+  <body>
+    <section>
+      <title>安全上のご注意</title>
+      <para>ご使用の前に、この章を必ずお読みください。</para>
+      <caution>沸騰中や沸騰直後は、本体を傾けないでください。熱湯が出てやけどの原因になります。</caution>
+      <caution>電源コードを束ねたまま使わないでください。</caution>
+      <section>
+        <title>設置について</title>
+        <para>水平で安定した場所に置いてください。</para>
+        <list>
+          <item>壁から 10cm 以上離す</item>
+          <item>直射日光と湿気を避ける</item>
+        </list>
+      </section>
+      <section>
+        <title>お手入れのときは</title>
+        <para>電源プラグを抜き、本体が冷めてから行ってください。</para>
+      </section>
+    </section>
+    <section>
+      <title>各部の名前</title>
+      <para>本体・ふた・電源プレートの3つで構成されています。</para>
+      <section>
+        <title>本体</title>
+        <para>容量は 2.0L です。</para>
+        <section>
+          <title>水量の目盛</title>
+          <para>「MIN」と「MAX」の間で使ってください。</para>
+        </section>
+      </section>
+      <section>
+        <title>電源プレート</title>
+      </section>
+    </section>
+    <section>
+      <title>使いかた</title>
+      <para>給水 &amp; 加熱の手順を説明します。</para>
+      <list>
+        <item>ふたを開けて給水する</item>
+        <item>電源プレートに置き、スイッチを入れる</item>
+        <item>沸騰すると自動で電源が切れる（&lt;保温機能&gt;はありません）</item>
+      </list>
+    </section>
+  </body>
+</manual>
